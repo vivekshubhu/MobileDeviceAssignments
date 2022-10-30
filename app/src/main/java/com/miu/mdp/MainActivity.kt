@@ -7,26 +7,34 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val foodList = arrayListOf("Momo", "Pizza", "Nepali", "Sandwich", "Shrimp", "Indian")
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        addFoodBtn.setOnClickListener {
-            if (addNewFoodEditText.text.isEmpty()) {
-                Toast.makeText(this, "Please enter a food", Toast.LENGTH_SHORT).show()
+
+        forgotPasswordTextView.setOnClickListener {
+            Toast.makeText(this, "Forgot Password Clicked", Toast.LENGTH_SHORT).show()
+        }
+
+        signInButton.setOnClickListener {
+            if (emailEditText.text.toString().isEmpty()) {
+                emailEditText.error = "Email is required"
                 return@setOnClickListener
             }
-            val newFood = addNewFoodEditText.text.toString()
-            foodList.add(newFood)
-            addNewFoodEditText.text.clear()
-            println(foodList)
-            Toast.makeText(this, "Added $newFood", Toast.LENGTH_SHORT).show()
+
+            if (passwordEditText.text.toString().isEmpty()) {
+                passwordEditText.error = "Password is required"
+                return@setOnClickListener
+            }
+
+            Toast.makeText(
+                this,
+                "Sign In: email: ${emailEditText.text} password: ${passwordEditText.text}",
+                Toast.LENGTH_SHORT
+            ).show()
         }
-        decideBtn.setOnClickListener {
-            val random = java.util.Random()
-            val randomFood = random.nextInt(foodList.count())
-            dinnerText.text = foodList[randomFood]
+
+        createAccountButton.setOnClickListener {
+            Toast.makeText(this, "Create Account Clicked", Toast.LENGTH_SHORT).show()
         }
     }
 }
