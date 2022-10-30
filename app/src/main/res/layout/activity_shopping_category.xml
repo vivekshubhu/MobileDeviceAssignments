@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".shopping.ShoppingCategoryActivity">
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="welcome sujan@gmail.com" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="Shop by Categories"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_text" />
+
+    <ImageView
+        android:id="@+id/category_electronics"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="Electronics"
+        android:src="@drawable/electronics"
+        app:layout_constraintEnd_toStartOf="@+id/category_clothing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/category_electronics_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Electronics"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/category_electronics"
+        app:layout_constraintStart_toStartOf="@id/category_electronics"
+        app:layout_constraintTop_toBottomOf="@+id/category_electronics" />
+
+
+    <ImageView
+        android:id="@+id/category_clothing"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/clothing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/category_electronics"
+        app:layout_constraintTop_toTopOf="@+id/category_electronics" />
+
+    <TextView
+        android:id="@+id/category_clothing_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Clothing"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/category_clothing"
+        app:layout_constraintStart_toStartOf="@id/category_clothing"
+        app:layout_constraintTop_toBottomOf="@+id/category_clothing" />
+
+    <ImageView
+        android:id="@+id/category_beauty"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="Beauty"
+        android:src="@drawable/beauty"
+        app:layout_constraintEnd_toStartOf="@+id/category_clothing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_electronics_text" />
+
+    <TextView
+        android:id="@+id/category_beauty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Beauty"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/category_beauty"
+        app:layout_constraintStart_toStartOf="@id/category_beauty"
+        app:layout_constraintTop_toBottomOf="@+id/category_beauty" />
+
+    <ImageView
+        android:id="@+id/category_food"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/food"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/category_beauty"
+        app:layout_constraintTop_toTopOf="@+id/category_beauty" />
+
+
+    <TextView
+        android:id="@+id/category_food_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Food"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/category_food"
+        app:layout_constraintStart_toStartOf="@id/category_food"
+        app:layout_constraintTop_toBottomOf="@+id/category_food" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

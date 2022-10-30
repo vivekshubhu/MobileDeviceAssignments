@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MDPAssignments"
         tools:targetApi="31">
+
         <activity
             android:name="com.miu.mdp.MainActivity"
             android:windowSoftInputMode="adjustResize"
@@ -23,6 +24,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shopping.ShoppingCategoryActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
