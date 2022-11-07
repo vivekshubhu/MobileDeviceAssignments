@@ -15,11 +15,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private val usersList = mutableListOf(
-        User("Sujan", "Lama", "sujan@gmail.com", "123456"),
-        User("Jane", "Doe", "janedoe@gmail.com", "123456"),
-        User("John", "Smith", "johnsmith@gmail.com", "123456"),
-        User("Jane", "Smith", "janesmith@gmail.com", "123456"),
-        User("John", "Doe", "johndoe@gmail.com", "123456")
+        User("Vivek", "Karki", "vivek@gmail.com", "123456"),
+        User("Ghana Shyam", "Regmi", "ghana@gmail.com", "123456")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
