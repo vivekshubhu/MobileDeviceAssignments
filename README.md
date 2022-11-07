@@ -12,5 +12,6 @@ Apply the Layout knowledge gained from the Lesson – 4.
 Screenshots:
 
 <p float="left">
-  <img src="/ss1.png" width="300"/>
+  <img src="/s1.png" width="300"/>
+  <img src="/s2.png" width="300"/>
 </p>
