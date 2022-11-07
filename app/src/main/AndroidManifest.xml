@@ -32,6 +32,13 @@
             android:name=".shopping.ShoppingCategoryActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".products.ProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".products.ProductActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
