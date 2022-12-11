@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.nav.home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/ivCoverPic"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_cover_img"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_profile_img"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.CircleImageView"
+        app:strokeColor="@color/white"
+        app:strokeWidth="4dp"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Home"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/shapeableImageView"
+        app:layout_constraintTop_toBottomOf="@+id/shapeableImageView" />
+
+    <TextView
+        android:id="@+id/tv_profile_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android developer"
+        android:textColor="@color/black_70"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/shapeableImageView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_career_note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile_description" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvCareerNote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Career note"
+                android:textColor="@color/black_70"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCareerNoteDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Completed on-campus studies and currently taking distance education courses to complete a Master's Degree in computer science (Available for full-time, w-2 employment)."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvCareerNote"
+                app:layout_constraintTop_toBottomOf="@id/tvCareerNote" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_tools_technologies"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_career_note" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tv_tools_technologies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tools and Technologies"
+                android:textColor="@color/black_70"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Languages: "
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/hs_language_desc"
+                app:layout_constraintBottom_toTopOf="@id/tv_frameworks"
+                app:layout_constraintStart_toStartOf="@id/tv_tools_technologies"
+                app:layout_constraintTop_toBottomOf="@id/tv_tools_technologies" />
+            <HorizontalScrollView
+                android:id="@+id/hs_language_desc"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_language"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_language"
+                app:layout_constraintTop_toTopOf="@+id/tv_language">
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cg_language_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleLine="true"
+                        tools:layout_height="24dp" />
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_frameworks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frameworks/Web: "
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hs_language_desc" />
+
+            <HorizontalScrollView
+                android:id="@+id/hs_framework_desc"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_frameworks"
+                app:layout_constraintStart_toEndOf="@id/tv_frameworks"
+                app:layout_constraintTop_toTopOf="@+id/tv_frameworks">
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cg_framework_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleLine="true" />
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_microservice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Microservices/Cloud: "
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hs_framework_desc" />
+
+            <HorizontalScrollView
+                android:id="@+id/hs_microservice_desc"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_microservice"
+                app:layout_constraintStart_toEndOf="@id/tv_microservice"
+                app:layout_constraintTop_toTopOf="@id/tv_microservice">
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cg_microservice_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleLine="true" />
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_database"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Databases: "
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hs_microservice_desc" />
+
+            <HorizontalScrollView
+                android:id="@+id/hs_database_desc"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_database"
+                app:layout_constraintStart_toEndOf="@id/tv_database"
+                app:layout_constraintTop_toTopOf="@id/tv_database">
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cg_database_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleLine="true" />
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/tv_tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tools: "
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hs_database_desc" />
+
+            <HorizontalScrollView
+                android:id="@+id/hs_tools_desc"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_tools"
+                app:layout_constraintStart_toEndOf="@id/tv_tools"
+                app:layout_constraintTop_toTopOf="@id/tv_tools">
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cg_tools_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleLine="true" />
+            </HorizontalScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/cg_add"
+        app:constraint_referenced_ids="sv_add_cover,iv_add_profile"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

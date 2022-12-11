@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.main.nav.home.ProfileEditFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Full Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_name">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Tell us about yourself" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_career_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_intro">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Career Note"
+                android:inputType="text|textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_work_experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Work Experience"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_career_note" />
+
+        <!--    <com.google.android.material.textfield.TextInputLayout-->
+        <!--        android:id="@+id/til_languages"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/tv_work_experience">-->
+        <!--        <com.google.android.material.textfield.TextInputEditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:inputType="text"-->
+        <!--            android:hint="Languages" />-->
+        <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+        <!--    <com.google.android.material.textfield.TextInputLayout-->
+        <!--        android:id="@+id/til_frameworks"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/til_languages">-->
+        <!--        <com.google.android.material.textfield.TextInputEditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:inputType="text"-->
+        <!--            android:hint="Frameworks/Web" />-->
+        <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+        <!--    <com.google.android.material.textfield.TextInputLayout-->
+        <!--        android:id="@+id/til_microservices"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/til_frameworks">-->
+        <!--        <com.google.android.material.textfield.TextInputEditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:inputType="text"-->
+        <!--            android:hint="Microservices/Cloud" />-->
+        <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+        <!--    <com.google.android.material.textfield.TextInputLayout-->
+        <!--        android:id="@+id/til_databases"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/til_frameworks">-->
+        <!--        <com.google.android.material.textfield.TextInputEditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:inputType="text"-->
+        <!--            android:hint="Databases" />-->
+        <!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+        <!--    <com.google.android.material.textfield.TextInputLayout-->
+        <!--        android:id="@+id/til_tools"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/til_databases">-->
+        <!--        <com.google.android.material.textfield.TextInputEditText-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:inputType="text"-->
+        <!--            android:hint="Tools" />-->
+        <!--    </com.google.android.material.textfield.TextInputLayout>-->
+        <!--    <androidx.constraintlayout.widget.Barrier-->
+        <!--        android:id="@+id/barrier"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:orientation="horizontal"-->
+        <!--        app:constraint_referenced_ids="recipient_group_FL"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/tv_work_experience"-->
+        <!--        app:layout_constraintBottom_toTopOf="@id/recipient_group_FL"-->
+        <!--        />-->
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recipient_group_FL" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/recipient_group_FL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            app:alignContent="space_around"
+            app:alignItems="stretch"
+            app:flexWrap="wrap"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_language"
+            app:layout_constraintTop_toBottomOf="@+id/tv_work_experience"
+            app:showDivider="beginning|middle|end">
+
+            <EditText
+                android:id="@+id/recipient_input_ET"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@android:color/transparent"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:autofillHints="@null"
+                app:layout_flexGrow="1"
+                tools:ignore="LabelFor" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

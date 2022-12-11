@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_position_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_company_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Maharishi international University" />
+
+    <TextView
+        android:id="@+id/tv_company_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Maharishi international University"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/time_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tv_position_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_position_title" />
+    <TextView
+        android:id="@+id/time_frame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Maharishi international University"
+        app:layout_constraintBottom_toTopOf="@+id/tv_company_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tv_company_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_company_name" />
+
+    <TextView
+        android:id="@+id/tv_company_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Maharishi international University"
+        app:layout_constraintBottom_toTopOf="@id/tv_company_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tv_position_title"
+        app:layout_constraintTop_toBottomOf="@+id/time_frame" />
+
+    <TextView
+        android:id="@+id/tv_company_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_company_address"
+        tools:text="Maharishi international University" />
+</androidx.constraintlayout.widget.ConstraintLayout>
