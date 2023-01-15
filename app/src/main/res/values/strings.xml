@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">MDP Assignments</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_onboarding_1">Android Quiz</string>
+    <string name="description_onboarding_1">Enhance your android programming skills and test your knowledge with our challenging android programming quiz
+    </string>
+
+    <string name="title_onboarding_2">Select Answer</string>
+    <string name="description_onboarding_2">Select the correct answer from the given options</string>
+
+    <string name="title_onboarding_3">Improve Your Skills</string>
+    <string name="description_onboarding_3">Improve your skills by learning from the correct answers</string>
+
+
 </resources>

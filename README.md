@@ -1,30 +1,23 @@
 # Mobile Device Programming Assignments
 This repository contains assignments of Mobile Device Programming course at MIU.
 
-
 ```
-Problem – 1: Design the Dinner Decider app as per the requirement either hard coding or drag and drop UIs. 
-Components need to be added are 
-• ImageView
-• TextView 
-• EditText 
-• Two Buttons for ADD FOOD and DECIDE!   
-
-To create ImageView/ImageButton use the given code in your xml file. Copy dd_logo image on your res\drawable folder. The dd_logo.png file is available on your Lesson3 homework assignment folder.
-
-Task A:
-In your MainActivity.kt, add an ArrayList with default values { Hamburger, Pizza, Mexican, American, Chinese }.
-If the user clicks the DECIDE! Button, randomly select the stored values from the ArrayList and then change the TextView with the random value.
-
-Task B:
-If the user is not happy with the default vales, they could add the food by typing in the EditText component and add the value by clicking the ADD FOOD button into ArrayList food.
-
+Lesson 10
+This assignment is a kind of small application for taking Quiz. So that, you will be working on
+this app development from Week 11 to Week 14. Must bring out the proper outcome.
+Problem 1: Quiz App.
+• Design an attractive android quiz app to test the Android Technical skill.
+• You could make use of the knowledge gained from Lesson-10-Android Jetpack
+ViewModel, LiveData, Room DB and Navigation Component.
+Sample Project Idea
+Here in the one sample idea from my side is provided to you. Applying UI design is up to your
+creativity.
+Perform the following:
+1. Create a Welcome screen/Home Screen describes about your Quiz app with the Start
+Quiz button. If you wish you can make Animated Splash screen or onboard screens.
+2. Use Room DB for Data persistence and store at least 15 Questions with its answer.
+3. User will take 15 MCQs, Clicking Next to continue the Quiz, skip by clicking, Home
+button to take into the Welcome screen. Here I produced two sample questions to know
+the UI design for showing questions.
 ```
 
-
-Screenshots:
-
-<p float="left">
-  <img src="/ss1.png" width="300"/>
-  <img src="/ss2.png" width="300"/> 
-</p>
